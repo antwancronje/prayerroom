@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Kids Feed Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#121212;font-family:ABeeZee,sans-serif;color:#fff;padding:0 16px 40px;min-height:100vh}
+
+.header-img{width:100%;height:200px;border-radius:24px;margin:16px 0;background:linear-gradient(135deg,#0d2137,#162d4a 40%,#1a1a3e 70%,#2a1a2e);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.header-img::before{content:"";position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:radial-gradient(circle,rgba(94,237,193,.3),transparent 70%);border-radius:50%}
+.header-img::after{content:"";position:absolute;bottom:-20px;left:-20px;width:100px;height:100px;background:radial-gradi<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Kids Feed Demo<size:36px;font-weight:400;color:#fff;z-index:1;text-align:center}
+.header-img p{font-size:16px;color:rgba(255,255,255,.7);z-index:1;margin-top:8px}
+
+.section-card{border-radius:24px;margin-bottom:20px;overflow:hidden;border:2px solid transparent;background-clip:padding-box;position:relative}
+.section-card::before{content:"";position:absolute;inset:-2px;border-radius:26px;z.header-img::before{content:"";position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:radial-gradient(circle,rgba(94,237,193,.3),transparent 70%);border-radius:50%}
+.header-img::after{content:"";position:absolute;bottom:-20px;left:-2,#.header-img::after{content:"";position:absolute;bottom:-20px;left:-20px;width:100px;height:100px;background:radial-gradi<meta name="refere{background:linear-gradient(135deg,#4FC3F7,#29B6F6)}
+.section-card:nth-child(6)::before{background:linear-gradient(135deg,#FFD54F,#FFC107)}
+
+.section-inner{background:#1E1E1E;border-radius:22px;padding:24px}
+
+.section-icon{width:48px;height:48px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.section-card:nth-child(1) .section-icon{background:rgba(94,237,193,.15)}
+.section-card:nth-child(2) .section-icon{background:rgba(242,199,68,.15)}
+.section-card:nth-child(3) .section-icon{background:rgba(255,138,101,.15)}
+.section-card:nth-child(4) .section-icon{background:rgba(124,131,255,.15)}
+.section-card:nth-child(5) .section-icon{background:rgba(79,195,247,.15)}
+.section-card:nth-child(6) .section-icon{background:rgba(255,213,79,.15)}
+
+.section-icon svg{width:28px;height:28px;stroke-width:2;fill:none}
+.section-card:nth-child(1) .section-icon svg{stroke:#5EEDC1}
+.section-card:nth-child(2) .section-icon svg{stroke:#F2C744}
+.section-card:nth-child(3) .section-icon svg{stroke:#FF8A65}
+.section-card:nth-child(4) .section-icon svg{stroke:#7C83FF}
+.section-card:nth-child(5) .section-icon svg{stroke:#4FC3F7}
+.section-card:nth-child(6) .section-icon svg{stroke:#FFD54F}
+
+.section-title{font-size:24px;font-weight:400;margin-bottom:4px}
+.section-card:nth-child(1) .section-title{color:#5EEDC1}
+.section-card:nth-child(2) .section-title{color:#F2C744}
+.section-card:nth-child(3) .section-title{color:#FF8A65}
+.section-card:nth-child(4) .section-title{color:#7C83FF}
+.section-card:nth-child(5) .section-title{color:#4FC3F7}
+.section-card:nth-child(6) .section-title{color:#FFD54F}
+
+.section-verse{font-size:14px;color:rgba(255,255,255,.5);font-style:italic;margin-bottom:20px}
+
+.sub-item{background:#252525;border-radius:20px;padding:22px;margin-bottom:14px}
+.sub-item:last-child{margin-bottom:0}
+.sub-focus{display:inline-block;font-size:12px;font-weight:700;padding:6px 14px;border-radius:100px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase}
+.section-card:nth-child(1) .sub-focus{background:rgba(94,237,193,.15);color:#5EEDC1}
+.section-card:nth-child(2) .sub-focus{background:rgba(242,199,68,.15);color:#F2C744}
+.section-card:nth-child(3) .sub-focus{background:rgba(255,138,101,.15);color:#FF8A65}
+.section-card:nth-child(4) .sub-focus{background:rgba(124,131,255,.15);color:#7C83FF}
+.section-card:nth-child(5) .sub-focus{background:rgba(79,195,247,.15);color:#4FC3F7}
+.section-card:nth-child(6) .sub-focus{background:rgba(255,213,79,.15);color:#FFD54F}
+
+.sub-title{font-size:20px;font-weight:400;color:#fff;margin-bottom:10px}
+.sub-desc{font-size:16px;color:rgba(255,255,255,.6);line-height:1.6;margin-bottom:16px}
+.sub-verse{font-size:15px;font-style:italic;color:rgba(255,255,255,.7);line-height:1.5;padding:14px 16px;background:rgba(255,255,255,.04);border-radius:12px;border-left:3px solid;margin-bottom:16px}
+.section-card:nth-child(1) .sub-verse{border-color:#5EEDC1}
+.section-card:nth-child(2) .sub-verse{border-color:#F2C744}
+.section-card:nth-child(3) .sub-verse{border-color:#FF8A65}
+.section-card:nth-child(4) .sub-verse{border-color:#7C83FF}
+.section-card:nth-child(5) .sub-verse{border-color:#4FC3F7}
+.section-card:nth-child(6) .sub-verse{border-color:#FFD54F}
+.sub-verse-ref{font-size:12px;color:rgba(255,255,255,.4);font-style:normal;margin-top:6px;letter-spacing:1px;text-transform:uppercase}
+
+.pray-card{padding:20px;border-radius:16px;background:linear-gradient(145deg,#0d2137,#162d4a 50%,#1a1a3e);border:1.5px solid rgba(94,237,193,.15)}
+.pray-label{display:inline-block;background:linear-gradient(135deg,#5EEDC1,#3EDBA8);color:#0B5D45;font-size:13px;font-weight:700;padding:8px 18px;border-radius:100px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px}
+.pray-text{font-size:18px;line-height:1.8;color:rgba(255,255,255,.9)}
+</style>
+</head>
+<body>
+
+<div class="header-img">
+  <h1>Kids Prayer</h1>
+  <p>Week 5 - Let's pray together!</p>
+</div>
+
+<div class="section-card">
+  <div class="section-inner">
+    <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+    <div class="section-title">Love God</div>
+    <div class="section-verse">"Our Father in heaven, hallowed be your name..."</div>
+    <div class="sub-item">
+      <div class="sub-focus">Name of God</div>
+      <div class="sub-title">Jehovah Nissi</div>
+      <div class="sub-desc">The Lord Is My Banner - God fights for us and gives us victory!</div>
+      <div class="sub-verse">"Moses built an altar and called it The LORD is my Banner."<div class="sub-verse-ref">Exodus 17:15</div></div>
+      <div class="pray-card">
+        <div class="pray-label">Kids Pray</div>
+        <div class="pray-text">God, You fight for me and help me win! You are my victory! You are holy! I love You!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-card">
+  <div class="section-inner">
+    <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+    <div class="section-title">Help Others</div>
+    <div class="section-verse">"May Your kingdom come soon. May Your will be done on earth, as it is in heaven."</div>
+    <div class="sub-item">
+      <div class="sub-focus">Salvation</div>
+      <div class="sub-title">Family Members</div>
+      <div class="sub-desc">God wants entire households to be saved and come to faith in Jesus.</div>
+      <div class="sub-verse">"Believe in the Lord Jesus and you will be saved, along with everyone in your household."<div class="sub-verse-ref">Acts 16:31</div></div>
+      <div class="pray-card">
+        <div class="pray-label">Kids Pray</div>
+        <div class="pray-text">Jesus, please save my mom, dad, brothers, sisters, grandparents, aunts, uncles, cousins who don't know You!</div>
+      </div>
+    </div>
+    <div class="sub-item">
+      <div class="sub-focus">Deliverance</div>
+      <div class="sub-title">Generational Curses</div>
+      <div class="sub-desc">Jesus breaks generational curses and replaces them with blessings.</div>
+      <div class="sub-verse">"But I lavish unfailing love for a thousand generations on those who love me and obey my commands."<div class="sub-verse-ref">Exodus 20:6</div></div>
+      <div class="pray-card">
+        <div class="pray-label">Kids Pray</div>
+        <div class="pray-text">Jesus, stop bad things that keep happening in families over and over. Make good things happen instead!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-card">
+  <div class="section-inner">
+    <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg></div>
+    <div class="section-title">Our Needs</div>
+    <div class="section-verse">"Give us today the food we need."</div>
+    <div class="sub-item">
+      <div class="sub-focus">Pastors & Leaders</div>
+      <div class="sub-title">Marriage and Family</div>
+      <div class="sub-desc">God wants leaders' marriages to be strong and healthy.</div>
+      <div class="pray-card">
+        <div class="pray-label">Kids Pray</div>
+        <div class="pray-text">God, help our pastor and leaders have strong, happy marriages and families!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-card">
+  <div class="section-inner">
+    <div class="section-icon"><svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg></div>
+    <div class="section-title">Sorry & Forgive</div>
+    <div class="section-verse">"Forgive us our sins, as we have forgiven those who sin against us."</div>
+    <div class="sub-item">
+      <div class="sub-focus">Confession</div>
+      <div class="sub-title">Selfishness</div>
+      <div class="sub-desc">God wants us to give cheerfully and generously.</div>
+      <div class="pray-card">
+        <div class="pray-label">Kids Pray</div>
+        <div class="pray-text">Jesus, I'm sorry for being selfish and not sharing. Help me be generous! I forgive people who didn't share with me!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-card">
+  <div class="section-inner">
+    <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+    <div class="section-title">Stay Safe</div>
+    <div class="section-verse">"Don't let us yield to temptation, but rescue us from the evil one."</div>
+    <div class="sub-item">
+      <div class="sub-focus">Pastors & Leaders</div>
+      <div class="sub-title">Guard Their Minds</div>
+      <div class="sub-desc">Leaders must guard their minds from doubt.</div>
+      <div class="pray-card">
+        <div class="pray-label">Kids Pray</div>
+        <div class="pray-text">God, don't let our pastor and leaders doubt You! Make their faith really strong!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-card">
+  <div class="section-inner">
+    <div class="section-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+    <div class="section-title">Thank You</div>
+    <div class="section-verse">"For Yours is the kingdom and the power and the glory forever. Amen."</div>
+    <div class="sub-item">
+      <div class="sub-focus">Gratitude</div>
+      <div class="sub-title">For Breakthrough Not Yet Seen</div>
+      <div class="sub-desc">We thank God because He is good and His love never fails.</div>
+      <div class="pray-card">
+        <div class="pray-label">Kids Pray</div>
+        <div class="pray-text">Thank You, Jesus, for being so good to us! Your love never stops! Amen!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
