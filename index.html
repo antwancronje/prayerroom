@@ -6,7 +6,7 @@
 <title>JesusPeople — Prayer Room</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600;700&family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 :root{
@@ -136,10 +136,10 @@ body{
 .pray-box{border-radius:var(--r-md);padding:22px;margin-bottom:14px}
 .pray-box:last-child{margin-bottom:0}
 .pray-box--adult{background:var(--mint-light);border:1.5px solid rgba(94,237,193,.2)}
-.pray-box--kids{background:var(--gold-light);border:1.5px solid rgba(242,199,68,.25)}
+.pray-box--kids{background:#1E1E1E;border-radius:20px;position:relative;border:2px solid transparent;background-clip:padding-box}.pray-box--kids::before{content:"";position:absolute;inset:-2px;border-radius:22px;background:linear-gradient(135deg,#5EEDC1,#F2C744);z-index:-1}
 .pray-box__label{font-family:var(--heading);font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:2.5px;margin-bottom:12px}
 .pray-box--adult .pray-box__label{color:#1a9e7a}
-.pray-box--kids .pray-box__label{color:var(--gold-dark)}
+.pray-box--kids .pray-box__label{display:inline-block;background:linear-gradient(135deg,#5EEDC1,#3EDBA8);color:#0B5D45;font-family:ABeeZee,sans-serif;font-size:13px;font-weight:700;padding:6px 16px;border-radius:100px;letter-spacing:2px}.pray-box--kids .pray-box__text{font-family:ABeeZee,sans-serif;font-size:18px;line-height:1.8;color:rgba(255,255,255,.87)}
 .pray-box__text{font-family:var(--body);font-size:17px;line-height:1.7;color:var(--text-card-secondary);font-weight:400}
 .howto{display:none}
 .howto.active{display:block}
