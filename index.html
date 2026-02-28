@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>JesusPeople — Prayer Room</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -163,6 +164,33 @@ body{
   .timer__display{font-size:64px}
   .sub-card__title{font-size:24px}
 }
+
+.session--kids .timer-card{background:linear-gradient(145deg,#1a2e4a,#1E1E1E 60%,#2a1a2e);border:1.5px solid rgba(94,237,193,.12)}
+.session--kids .timer__display{background:linear-gradient(135deg,#5EEDC1,#F2C744);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.session--kids .timer__phase{color:#5EEDC1}
+.session--kids .timer__btn--primary{background:linear-gradient(135deg,#5EEDC1,#3EDBA8);color:#0B5D45;font-family:ABeeZee,sans-serif}
+.session--kids .timer__bar{background:linear-gradient(90deg,#5EEDC1,#F2C744,#FF8A65)}
+.session--kids .sp__section{background:linear-gradient(145deg,#1a2e4a,#1E1E1E 70%);border:1.5px solid rgba(94,237,193,.1)}
+.session--kids .sp__section--open{border-color:rgba(94,237,193,.25)}
+.session--kids .sp__section-icon{background:linear-gradient(135deg,rgba(94,237,193,.2),rgba(242,199,68,.15))}
+.session--kids .sp__section-title{font-family:ABeeZee,sans-serif;font-size:18px;font-weight:400;text-transform:none;letter-spacing:0}
+.session--kids .sp__section-count{font-family:ABeeZee,sans-serif}
+.session--kids .section-label{font-family:ABeeZee,sans-serif;text-transform:none;letter-spacing:0}
+.session--kids .session__back{font-family:ABeeZee,sans-serif;background:linear-gradient(135deg,rgba(94,237,193,.15),rgba(242,199,68,.1));border:1px solid rgba(94,237,193,.2);text-transform:none;letter-spacing:0}
+.session--kids .sub-card{border:2px solid rgba(94,237,193,.1);box-shadow:0 4px 20px rgba(94,237,193,.05)}
+.session--kids .sub-card__focus{background:linear-gradient(135deg,#5EEDC1,#3EDBA8);color:#0B5D45;font-family:ABeeZee,sans-serif;font-size:13px;letter-spacing:1px}
+.session--kids .sub-card__title{font-family:ABeeZee,sans-serif;font-size:24px;text-transform:none;letter-spacing:0}
+.session--kids .sub-card__subtitle{font-family:ABeeZee,sans-serif}
+.session--kids .sub-card__desc{font-family:ABeeZee,sans-serif;font-size:17px;line-height:1.7}
+.session--kids .sub-card__verse-text{font-family:ABeeZee,sans-serif}
+.session--kids .sub-card__verse-ref{font-family:ABeeZee,sans-serif}
+.session--kids .pray-box--kids{background:linear-gradient(145deg,#0d2137,#162d4a 50%,#1a1a3e);border-radius:24px;padding:28px 24px;border:2px solid transparent;background-clip:padding-box}
+.session--kids .pray-box--kids::before{border-radius:26px;background:linear-gradient(135deg,#5EEDC1,#3EDBA8,#F2C744,#FF8A65)}
+.session--kids .pray-box--kids .pray-box__label{font-size:15px;padding:10px 24px;margin-bottom:16px;box-shadow:0 4px 15px rgba(94,237,193,.3)}
+.session--kids .pray-box--kids .pray-box__text{font-size:20px;line-height:1.85;color:rgba(255,255,255,.95)}
+.session--kids .timer__dur-btn{border-color:rgba(94,237,193,.4);color:#5EEDC1;font-family:ABeeZee,sans-serif}
+.session--kids .timer__dur-label{font-family:ABeeZee,sans-serif;color:#5EEDC1}
+.session--kids .timer__split{font-family:ABeeZee,sans-serif}
 </style>
 </head>
 <body>
@@ -649,8 +677,8 @@ function openSession(type){
   document.getElementById('homeView').style.display='none';
   document.getElementById('howtoView').classList.remove('active');
   var sv=document.getElementById('sessionView');
-  sv.classList.add('active');sv.style.display='block';
-  document.getElementById('sessionIframe').src='https://www.youtube.com/embed/'+VIDEOS[type]+'?rel=0&modestbranding=1';
+  sv.classList.add('active');sv.style.display='block';if(type==='kids'){sv.classList.add('session--kids')}else{sv.classList.remove('session--kids')}
+  document.getElementById('sessionIframe').src='https://www.youtube-nocookie.com/embed/'+VIDEOS[type]+'?rel=0&modestbranding=1&origin='+encodeURIComponent(window.location.origin);
   buildSessionPrayer();
   window.scrollTo({top:0,behavior:'auto'});
 }
