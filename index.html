@@ -172,7 +172,7 @@ body{
 .session--kids .timer__bar{background:linear-gradient(90deg,#5EEDC1,#F2C744,#FF8A65)}
 .session--kids .sp__section{background:linear-gradient(145deg,#1a2e4a,#1E1E1E 70%);border:1.5px solid rgba(94,237,193,.1)}
 .session--kids .sp__section--open{border-color:rgba(94,237,193,.25)}
-.session--kids .sp__section-icon{background:linear-gradient(135deg,rgba(94,237,193,.2),rgba(242,199,68,.15))}
+.session--kids .sp__section-icon{background:none;width:56px;height:56px;border-radius:16px;overflow:hidden}
 .session--kids .sp__section-title{font-family:ABeeZee,sans-serif;font-size:18px;font-weight:400;text-transform:none;letter-spacing:0}
 .session--kids .sp__section-count{font-family:ABeeZee,sans-serif}
 .session--kids .section-label{font-family:ABeeZee,sans-serif;text-transform:none;letter-spacing:0}
@@ -666,6 +666,15 @@ refresh:'<svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><polyline
 shield:'<svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
 star:'<svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'
 };
+var KIDS_ICONS={
+heart:'<img src="1.svg" style="width:100%;height:100%;object-fit:contain">',
+users:'<img src="2.svg" style="width:100%;height:100%;object-fit:contain">',
+hand:'<img src="3.svg" style="width:100%;height:100%;object-fit:contain">',
+refresh:'<img src="4.svg" style="width:100%;height:100%;object-fit:contain">',
+shield:'<img src="5.svg" style="width:100%;height:100%;object-fit:contain">',
+star:'<img src="6.svg" style="width:100%;height:100%;object-fit:contain">'
+};
+
 function buildWeekStrip(){
   var s=document.getElementById('weekStrip');if(!s)return;s.innerHTML='';
   var now=new Date(),day=now.getDay(),mon=new Date(now);
@@ -707,7 +716,7 @@ function buildSessionPrayer(){
     var sec=secs[i];
     var h='<div class="sp__section" id="spSec'+i+'">';
     h+='<div class="sp__section-header" onclick="toggleAccordion('+i+')">';
-    h+='<div class="sp__section-icon">'+ICONS[sec.icon]+'</div>';
+    h+='<div class="sp__section-icon">'+(currentSession==='kids'?KIDS_ICONS[sec.icon]:ICONS[sec.icon])+'</div>';
     h+='<div class="sp__section-info"><div class="sp__section-title">'+sec.title+'</div><div class="sp__section-count">'+sec.count+'</div></div>';
     h+='<div class="sp__section-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>';
     h+='</div>';
