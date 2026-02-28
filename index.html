@@ -712,8 +712,7 @@ function buildSessionPrayer(){
       if(sub.subtitle)h+='<div class="sub-card__subtitle">'+sub.subtitle+'</div>';
       h+='<div class="sub-card__desc">'+sub.desc+'</div>';
       h+='<div class="sub-card__verse-block"><div class="sub-card__verse-text">'+sub.verseText+'</div><div class="sub-card__verse-ref">'+sub.verseRef+'</div></div>';
-      h+='<div class="pray-box pray-box--adult"><div class="pray-box__label">Adult Prayer</div><div class="pray-box__text">'+sub.adultPrayer+'</div></div>';
-      h+='<div class="pray-box pray-box--kids"><div class="pray-box__label">Kids Prayer</div><div class="pray-box__text">'+sub.kidsPrayer+'</div></div>';
+      if(currentSession==='adults'){h+='<div class="pray-box pray-box--adult"><div class="pray-box__label">Adult Prayer</div><div class="pray-box__text">'+sub.adultPrayer+'</div></div>';}else{h+='<div class="pray-box pray-box--kids"><div class="pray-box__label">Kids Prayer</div><div class="pray-box__text">'+sub.kidsPrayer+'</div></div>';}
       h+='</div>';
     }
     h+='</div></div></div>';
