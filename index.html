@@ -151,13 +151,13 @@ body{
 .howto__note{background:var(--surface);border-radius:var(--r-lg);border-left:4px solid var(--gold);padding:24px;margin-top:12px}
 .howto__note p{font-family:var(--body);font-size:17px;color:var(--text-med);line-height:1.6}
 .howto__note strong{color:var(--mint-on-dark);font-weight:700}
-.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:900;background:#1A1A1A;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:center;gap:48px;padding:10px 0 calc(14px + env(safe-area-inset-bottom))}
+.bottom-nav{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:900;background:#1E1E1E;border:1px solid rgba(255,255,255,.08);display:flex;justify-content:center;gap:40px;padding:12px 40px;border-radius:100px;box-shadow:0 8px 32px rgba(0,0,0,.5)}
 .nav-btn{display:flex;flex-direction:column;align-items:center;gap:4px;background:none;border:none;cursor:pointer;padding:6px 24px}
 .nav-btn svg{width:28px;height:28px;stroke-width:2;fill:none;transition:all .15s}
 .nav-btn__label{font-family:var(--heading);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;transition:color .15s;margin-top:2px}
 .nav-btn--inactive svg{stroke:var(--text-low)}
 .nav-btn--inactive .nav-btn__label{color:var(--text-low)}
-.nav-btn--active svg{stroke:var(--mint-on-dark);background:rgba(94,237,193,.15);border-radius:12px;padding:4px}
+.nav-btn--active svg{stroke:var(--mint-on-dark)}
 .nav-btn--active .nav-btn__label{color:var(--mint-on-dark)}
 @media(max-width:380px){
   .header__title{font-size:38px}
