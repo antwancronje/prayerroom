@@ -152,7 +152,7 @@ body{
 .howto__note p{font-family:var(--body);font-size:17px;color:var(--text-med);line-height:1.6}
 .howto__note strong{color:var(--mint-on-dark);font-weight:700}
 .bottom-nav{position:fixed;bottom:12px;left:16px;right:16px;z-index:900;background:#1E1E1E;border:1px solid rgba(255,255,255,.1);display:flex;justify-content:center;gap:0;padding:10px 8px calc(10px + env(safe-area-inset-bottom));border-radius:20px;box-shadow:0 8px 32px rgba(0,0,0,.5)}
-.nav-btn{display:flex;flex-direction:column;align-items:center;gap:4px;background:none;border:none;cursor:pointer;padding:10px 28px;border-radius:14px;transition:background .2s}
+.nav-btn{display:flex;flex-direction:column;align-items:center;gap:4px;background:none;border:none;cursor:pointer;padding:10px 0;border-radius:14px;transition:background .2s;flex:1}
 .nav-btn svg{width:28px;height:28px;stroke-width:2;fill:none;transition:all .15s}
 .nav-btn__label{font-family:var(--heading);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;transition:color .15s;margin-top:2px}
 .nav-btn--inactive svg{stroke:var(--text-low)}
@@ -284,6 +284,14 @@ body{
   <button class="nav-btn nav-btn--active" id="navHome" onclick="showPage('home')">
     <svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><polyline points="9,21 9,14 15,14 15,21"/></svg>
     <span class="nav-btn__label">Home</span>
+  </button>
+  <button class="nav-btn nav-btn--inactive" id="navAdults" onclick="navSession('adults')">
+    <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    <span class="nav-btn__label">Adults</span>
+  </button>
+  <button class="nav-btn nav-btn--inactive" id="navKids" onclick="navSession('kids')">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"/><path d="M16 21l-2-6h-4l-2 6"/><path d="M8 15l-2-4h12l-2 4"/></svg>
+    <span class="nav-btn__label">Kids</span>
   </button>
   <button class="nav-btn nav-btn--inactive" id="navHowTo" onclick="showPage('howto')">
     <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
@@ -789,10 +797,15 @@ function showPage(p){
   document.getElementById('sessionView').classList.remove('active');
   var hw=document.getElementById('howtoView');
   if(p==='howto'){hw.classList.add('active');}else{hw.classList.remove('active');}
-  document.getElementById('navHome').className='nav-btn '+(p==='home'?'nav-btn--active':'nav-btn--inactive');
+  document.querySelectorAll('.nav-btn').forEach(function(b){b.className='nav-btn nav-btn--inactive'});document.getElementById('navHome').className='nav-btn '+(p==='home'?'nav-btn--active':'nav-btn--inactive');
   document.getElementById('navHowTo').className='nav-btn '+(p==='howto'?'nav-btn--active':'nav-btn--inactive');
   if(p!=='session'){document.getElementById('sessionIframe').src='';resetTimer();}
   window.scrollTo({top:0,behavior:'auto'});
+}
+function navSession(type){
+  document.querySelectorAll('.nav-btn').forEach(function(b){b.className='nav-btn nav-btn--inactive'});
+  document.getElementById('nav'+type.charAt(0).toUpperCase()+type.slice(1)).className='nav-btn nav-btn--active';
+  openSession(type);
 }
 buildWeekStrip();
 </script>
