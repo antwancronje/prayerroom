@@ -136,10 +136,10 @@ body{
 .pray-box{border-radius:var(--r-md);padding:22px;margin-bottom:14px}
 .pray-box:last-child{margin-bottom:0}
 .pray-box--adult{background:var(--mint-light);border:1.5px solid rgba(94,237,193,.2)}
-.pray-box--kids{background:#1E1E1E;border-radius:20px;position:relative;border:2px solid transparent;background-clip:padding-box}.pray-box--kids::before{content:"";position:absolute;inset:-2px;border-radius:22px;background:linear-gradient(135deg,#5EEDC1,#F2C744);z-index:-1}
+.pray-box--kids{background:linear-gradient(145deg,#1a2e4a 0%,#1E1E1E 40%,#2a1a2e 100%);border-radius:24px;position:relative;border:2px solid transparent;background-clip:padding-box}.pray-box--kids::before{content:"";position:absolute;inset:-2px;border-radius:26px;background:linear-gradient(135deg,#5EEDC1,#3EDBA8,#F2C744);z-index:-1}
 .pray-box__label{font-family:var(--heading);font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:2.5px;margin-bottom:12px}
 .pray-box--adult .pray-box__label{color:#1a9e7a}
-.pray-box--kids .pray-box__label{display:inline-block;background:linear-gradient(135deg,#5EEDC1,#3EDBA8);color:#0B5D45;font-family:ABeeZee,sans-serif;font-size:13px;font-weight:700;padding:6px 16px;border-radius:100px;letter-spacing:2px}.pray-box--kids .pray-box__text{font-family:ABeeZee,sans-serif;font-size:18px;line-height:1.8;color:rgba(255,255,255,.87)}
+.pray-box--kids .pray-box__label{display:inline-block;background:linear-gradient(135deg,#5EEDC1,#3EDBA8);color:#0B5D45;font-family:ABeeZee,sans-serif;font-size:15px;font-weight:700;padding:10px 22px;border-radius:100px;letter-spacing:2.5px;margin-bottom:16px;box-shadow:0 4px 15px rgba(94,237,193,.25)}.pray-box--kids .pray-box__text{font-family:ABeeZee,sans-serif;font-size:20px;line-height:1.85;color:rgba(255,255,255,.95);letter-spacing:.3px}
 .pray-box__text{font-family:var(--body);font-size:17px;line-height:1.7;color:var(--text-card-secondary);font-weight:400}
 .howto{display:none}
 .howto.active{display:block}
@@ -206,7 +206,7 @@ body{
       Back
     </button>
     <div class="session__video-wrap">
-      <iframe id="sessionIframe" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe id="sessionIframe" allow="autoplay; encrypted-media" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </div>
     <div class="timer-card">
       <div class="timer__duration">
