@@ -90,7 +90,7 @@ body{
 .session__back{display:inline-flex;align-items:center;gap:6px;background:var(--surface-2);border:none;border-radius:100px;padding:10px 16px;font-family:var(--heading);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-high);cursor:pointer;margin:20px 0 16px}
 .session__back:active{background:rgba(255,255,255,.12)}
 .session__back svg{width:18px;height:18px;stroke:var(--text-high);stroke-width:2.5;fill:none}
-.session__video-wrap{border-radius:var(--r-lg);overflow:hidden;margin-bottom:24px;aspect-ratio:16/9;background:var(--surface)}
+.session__video-wrap{border-radius:var(--r-lg);overflow:hidden;margin-bottom:24px;aspect-ratio:16/9;background:var(--surface);position:relative}
 .session__video-wrap iframe{width:100%;height:100%;border:none}
 .timer-card{background:var(--surface);border-radius:var(--r-xl);padding:28px 24px;position:relative;overflow:hidden;margin-bottom:28px}
 .timer-card::before{content:'';position:absolute;top:-40px;right:-40px;width:120px;height:120px;background:var(--gold);border-radius:50%;opacity:.04;filter:blur(50px)}
@@ -192,7 +192,7 @@ body{
 .session--kids .timer__dur-label{font-family:ABeeZee,sans-serif;color:#5EEDC1}
 .session--kids .timer__split{font-family:ABeeZee,sans-serif}
 .session--kids{font-family:ABeeZee,sans-serif}.session--kids *{font-family:ABeeZee,sans-serif!important}
-</style>
+.video-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;z-index:2;border-radius:var(--r-lg);overflow:hidden;transition:opacity .3s}.video-overlay--adults{background:linear-gradient(145deg,#0B5D45,#1a9e7a,#3EDBA8)}.video-overlay--kids{background-size:cover;background-position:center}.video-overlay__play{width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(0,0,0,.3);margin-bottom:16px}.video-overlay__play svg{width:32px;height:32px;fill:#0B5D45;margin-left:4px}.video-overlay__text{font-family:var(--heading);font-size:28px;font-weight:900;text-transform:uppercase;letter-spacing:3px;color:white;text-shadow:0 2px 8px rgba(0,0,0,.3)}.video-overlay.hidden{opacity:0;pointer-events:none}</style>
 </head>
 <body>
 <div class="ambient"><div class="orb orb--1"></div><div class="orb orb--2"></div><div class="orb orb--3"></div></div>
@@ -235,7 +235,7 @@ body{
       Back
     </button>
     <div class="session__video-wrap">
-      <iframe id="sessionIframe" allow="autoplay; encrypted-media" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <iframe id="sessionIframe" allow="autoplay; encrypted-media" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe><div class="video-overlay" id="videoOverlay" onclick="playVideo()"><div class="video-overlay__play"><svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg></div><div class="video-overlay__text">Worship</div></div>
     </div>
     <div class="timer-card">
       <div class="timer__duration">
@@ -690,14 +690,14 @@ function buildWeekStrip(){
   }
 }
 var currentSession=null;
-function openSession(type){
+function playVideo(){var o=document.getElementById("videoOverlay");o.classList.add("hidden");var f=document.getElementById("sessionIframe");f.src=f.src+"&autoplay=1";}function openSession(type){
   currentSession=type;
   document.getElementById('homeView').style.display='none';
   document.getElementById('howtoView').classList.remove('active');
   var sv=document.getElementById('sessionView');
   sv.classList.add('active');sv.style.display='block';if(type==='kids'){sv.classList.add('session--kids')}else{sv.classList.remove('session--kids')}
   document.getElementById('sessionIframe').src='https://www.youtube-nocookie.com/embed/'+VIDEOS[type]+'?rel=0&modestbranding=1&origin='+encodeURIComponent(window.location.origin);
-  buildSessionPrayer();
+  buildSessionPrayer();var ov=document.getElementById("videoOverlay");ov.classList.remove("hidden","video-overlay--adults","video-overlay--kids");if(type==="kids"){ov.classList.add("video-overlay--kids");ov.style.backgroundImage="url(kids%20youtube%20cover.png)";}else{ov.classList.add("video-overlay--adults");ov.style.backgroundImage="none";}
   window.scrollTo({top:0,behavior:'auto'});
 }
 function closeSession(){
