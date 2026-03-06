@@ -94,9 +94,8 @@ var currentSection=0;
 function login(){
   PASSWORD=document.getElementById('passwordInput').value;
   if(!PASSWORD){showStatus('loginStatus','Please enter a password','err');return;}
-  showStatus('loginStatus','Checking...','loading');
-  // Test by fetching weeks.json directly (no password needed for read)
-  fetch('weeks.json?_='+Date.now())
+  showStatus('loginStatus','Loading...','loading');
+  fetch('https://raw.githubusercontent.com/antwancronje/prayerroom/main/weeks.json?_='+Date.now())
     .then(function(r){return r.json()})
     .then(function(data){
       allData=data;
