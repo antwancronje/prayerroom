@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prayer Room — Admin</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#121212;--surface:#1E1E1E;--surface-2:#252525;--mint:#5EEDC1;--mint-bg:#3EDBA8;--mint-deep:#0B5D45;--gold:#F2C744;--white:#fff;--text-high:rgba(255,255,255,.87);--text-med:rgba(255,255,255,.6);--text-low:rgba(255,255,255,.38);--heading:'Barlow Condensed',Impact,sans-serif;--body:'Barlow',system-ui,sans-serif}
+body{font-family:var(--body);background:var(--bg);color:var(--text-high);min-height:100dvh;padding:20px}
+.container{max-width:600px;margin:0 auto}
+h1{font-family:var(--heading);font-size:36px;font-weight:900;text-transform:uppercase;color:var(--white);margin-bottom:4px}
+.sub{font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+.card{background:var(--surface);border-radius:16px;padding:24px;margin-bottom:16px}
+.card h2{font-family:var(--heading);font-size:22px;font-weight:800;text-transform:uppercase;color:var(--white);margin-bottom:16px}
+label{display:block;font-size:13px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px;margin-top:16px}
+label:first-child{margin-top:0}
+input,select,textarea{width:100%;padding:12px 16px;border-radius:12px;border:1.5px solid rgba(255,255,255,.1);background:var(--surface-2);color:var(--text-high);font-family:var(--body);font-size:16px;outline:none;transition:border-color .2s}
+input:focus,select:focus,textarea:focus{border-color:var(--mint)}
+textarea{min-height:100px;resize:vertical}
+select{cursor:pointer;-webkit-appearance:none;appearance:none}
+.btn{display:inline-block;padding:16px 36px;border-radius:100px;border:none;font-family:var(--heading);font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:2px;cursor:pointer;transition:all .12s;margin-top:20px}
+.btn:active{transform:scale(.96)}
+.btn-primary{background:var(--mint-bg);color:var(--mint-deep)}
+.btn-lock{background:var(--gold);color:var(--bg)}
+.status{margin-top:16px;padding:16px 20px;border-radius:12px;font-weight:600;display:none}
+.status-ok{background:rgba(94,237,193,.15);color:var(--mint);display:block}
+.status-err{background:rgba(255,80,80,.15);color:#ff5050;display:block}
+.status-loading{background:rgba(242,199,68,.15);color:var(--gold);display:block}
+#loginScreen,#adminScreen{display:none}
+#loginScreen.active,#adminScreen.active{display:block}
+.section-nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.section-btn{padding:8px 16px;border-radius:100px;border:1.5px solid rgba(255,255,255,.1);background:var(--surface-2);color:var(--text-med);font-family:var(--heading);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;cursor:pointer;transition:all .2s}
+.section-btn.active{background:var(--mint-bg);color:var(--mint-deep);border-color:var(--mint)}
+.subsection-card{background:var(--surface-2);border-radius:12px;padding:20px;margin-bottom:12px;border-left:4px solid var(--mint)}
+.subsection-card h3{font-family:var(--heading);font-size:18px;font-weight:800;text-transform:uppercase;color:var(--white);margin-bottom:4px}
+.subsection-card .focus-tag{font-size:12px;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:1.5px}
+.save-float{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:100}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+<div id="loginScreen" class="active">
+  <h1>Prayer Room</h1>
+  <div class="sub">Admin</div>
+  <div class="card">
+    <label>Password</label>
+    <input type="password" id="passwordInput" placeholder="Enter admin password">
+    <button class="btn btn-lock" onclick="login()">Unlock</button>
+    <div class="status" id="loginStatus"></div>
+  </div>
+</div>
+
+<div id="adminScreen">
+  <h1>Prayer Room</h1>
+  <div class="sub">Admin</div>
+
+  <div class="card">
+    <h2>Videos</h2>
+    <label>Adults YouTube Link or ID</label>
+    <input type="text" id="adultsVideo" placeholder="e.g. HFP0B-UnjW4 or full YouTube URL">
+    <label>Kids YouTube Link or ID</label>
+    <input type="text" id="kidsVideo" placeholder="e.g. F-6Qzmx_8-c or full YouTube URL">
+    <button class="btn btn-primary" onclick="saveVideos()">Save Videos</button>
+    <div class="status" id="videoStatus"></div>
+  </div>
+
+  <div class="card">
+    <h2>Edit Week Content</h2>
+    <label>Select Week</label>
+    <select id="weekSelect" onchange="loadWeek()">
+      <option value="">— Pick a week —</option>
+    </select>
+    <div id="weekEditor" style="display:none;margin-top:20px">
+      <div class="section-nav" id="sectionNav"></div>
+      <div id="sectionContent"></div>
+      <button class="btn btn-primary" onclick="saveWeek()" style="width:100%">Save This Week</button>
+      <div class="status" id="weekStatus"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+var WEBHOOK='https://n8n.myjesus.co.za/webhook/prayer-room-update';
+var PASSWORD='';
+var weekData=null;
+var allData=null;
+var currentSection=0;
+
+function login(){
+  PASSWORD=document.getElementById('passwordInput').value;
+  if(!PASSWORD){showStatus('loginStatus','Please enter a password','err');return;}
+  showStatus('loginStatus','Checking...','loading');
+  // Test by fetching weeks.json directly (no password needed for read)
+  fetch('weeks.json?_='+Date.now())
+    .then(function(r){return r.json()})
+    .then(function(data){
+      allData=data;
+      document.getElementById('loginScreen').classList.remove('active');
+      document.getElementById('adminScreen').classList.add('active');
+      document.getElementById('adultsVideo').value=data.videos.adults;
+      document.getElementById('kidsVideo').value=data.videos.kids;
+      var sel=document.getElementById('weekSelect');
+      var weeks=Object.keys(data.weeks).sort(function(a,b){return parseInt(a)-parseInt(b)});
+      weeks.forEach(function(w){
+        var opt=document.createElement('option');
+        opt.value=w;opt.textContent='Week '+w;
+        sel.appendChild(opt);
+      });
+    })
+    .catch(function(){showStatus('loginStatus','Could not load data','err');});
+}
+
+function extractVideoId(val){
+  if(!val)return '';
+  val=val.trim();
+  // Handle full URLs
+  var m=val.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^&?\s]+)/);
+  if(m)return m[1];
+  // Already an ID
+  return val;
+}
+
+function saveVideos(){
+  var adults=extractVideoId(document.getElementById('adultsVideo').value);
+  var kids=extractVideoId(document.getElementById('kidsVideo').value);
+  if(!adults&&!kids){showStatus('videoStatus','Enter at least one video','err');return;}
+  showStatus('videoStatus','Saving...','loading');
+  fetch(WEBHOOK,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({password:PASSWORD,adults_video:adults,kids_video:kids})
+  })
+  .then(function(r){return r.json()})
+  .then(function(d){
+    if(d.status==='success'){showStatus('videoStatus','Videos updated! Live in ~60 seconds.','ok');}
+    else{showStatus('videoStatus',d.message||'Error','err');}
+  })
+  .catch(function(e){showStatus('videoStatus','Failed: '+e.message,'err');});
+}
+
+function loadWeek(){
+  var w=document.getElementById('weekSelect').value;
+  if(!w){document.getElementById('weekEditor').style.display='none';return;}
+  weekData=JSON.parse(JSON.stringify(allData.weeks[w]));
+  currentSection=0;
+  document.getElementById('weekEditor').style.display='block';
+  buildSectionNav();
+  renderSection();
+}
+
+function buildSectionNav(){
+  var nav=document.getElementById('sectionNav');
+  nav.innerHTML='';
+  weekData.sections.forEach(function(sec,i){
+    var btn=document.createElement('button');
+    btn.className='section-btn'+(i===currentSection?' active':'');
+    btn.textContent=sec.title;
+    btn.onclick=function(){currentSection=i;buildSectionNav();renderSection();};
+    nav.appendChild(btn);
+  });
+}
+
+function renderSection(){
+  var sec=weekData.sections[currentSection];
+  var html='';
+  sec.subsections.forEach(function(sub,j){
+    html+='<div class="subsection-card">';
+    html+='<div class="focus-tag">'+sub.focus+'</div>';
+    html+='<h3>'+sub.title+'</h3>';
+    html+='<label>Title</label><input type="text" value="'+escHtml(sub.title)+'" onchange="updateField('+j+\',\'title\',this.value)">';
+    html+='<label>Subtitle</label><input type="text" value="'+escHtml(sub.subtitle)+'" onchange="updateField('+j+',\'subtitle\',this.value)">';
+    html+='<label>Description</label><textarea onchange="updateField('+j+',\'desc\',this.value)">'+escHtml(sub.desc)+'</textarea>';
+    html+='<label>Scripture</label><textarea onchange="updateField('+j+',\'verseText\',this.value)">'+escHtml(sub.verseText)+'</textarea>';
+    html+='<label>Scripture Ref</label><input type="text" value="'+escHtml(sub.verseRef)+'" onchange="updateField('+j+',\'verseRef\',this.value)">';
+    html+='<label>Adult Prayer</label><textarea onchange="updateField('+j+',\'adultPrayer\',this.value)">'+escHtml(sub.adultPrayer)+'</textarea>';
+    html+='<label>Kids Prayer</label><textarea onchange="updateField('+j+',\'kidsPrayer\',this.value)">'+escHtml(sub.kidsPrayer)+'</textarea>';
+    html+='</div>';
+  });
+  document.getElementById('sectionContent').innerHTML=html;
+}
+
+function updateField(subIdx,field,value){
+  weekData.sections[currentSection].subsections[subIdx][field]=value;
+}
+
+function saveWeek(){
+  var w=document.getElementById('weekSelect').value;
+  if(!w){showStatus('weekStatus','No week selected','err');return;}
+  showStatus('weekStatus','Saving...','loading');
+  fetch(WEBHOOK,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({password:PASSWORD,week_number:w,week_data:JSON.stringify(weekData)})
+  })
+  .then(function(r){return r.json()})
+  .then(function(d){
+    if(d.status==='success'){showStatus('weekStatus','Week '+w+' updated! Live in ~60 seconds.','ok');}
+    else{showStatus('weekStatus',d.message||'Error','err');}
+  })
+  .catch(function(e){showStatus('weekStatus','Failed: '+e.message,'err');});
+}
+
+function escHtml(s){
+  if(!s)return '';
+  return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function showStatus(id,msg,type){
+  var el=document.getElementById(id);
+  el.className='status status-'+type;
+  el.textContent=msg;
+}
+</script>
+</body>
+</html>
