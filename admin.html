@@ -35,7 +35,6 @@ select{cursor:pointer;-webkit-appearance:none;appearance:none}
 .subsection-card{background:var(--surface-2);border-radius:12px;padding:20px;margin-bottom:12px;border-left:4px solid var(--mint)}
 .subsection-card h3{font-family:var(--heading);font-size:18px;font-weight:800;text-transform:uppercase;color:var(--white);margin-bottom:4px}
 .subsection-card .focus-tag{font-size:12px;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:1.5px}
-.save-float{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:100}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -96,7 +95,7 @@ function login(){
   if(!PASSWORD){showStatus('loginStatus','Please enter a password','err');return;}
   showStatus('loginStatus','Loading...','loading');
   fetch('https://raw.githubusercontent.com/antwancronje/prayerroom/main/weeks.json?_='+Date.now())
-    .then(function(r){return r.json()})
+    .then(function(r){return r.json();})
     .then(function(data){
       allData=data;
       document.getElementById('loginScreen').classList.remove('active');
@@ -104,23 +103,21 @@ function login(){
       document.getElementById('adultsVideo').value=data.videos.adults;
       document.getElementById('kidsVideo').value=data.videos.kids;
       var sel=document.getElementById('weekSelect');
-      var weeks=Object.keys(data.weeks).sort(function(a,b){return parseInt(a)-parseInt(b)});
+      var weeks=Object.keys(data.weeks).sort(function(a,b){return parseInt(a)-parseInt(b);});
       weeks.forEach(function(w){
         var opt=document.createElement('option');
         opt.value=w;opt.textContent='Week '+w;
         sel.appendChild(opt);
       });
     })
-    .catch(function(){showStatus('loginStatus','Could not load data','err');});
+    .catch(function(e){showStatus('loginStatus','Could not load data: '+e.message,'err');});
 }
 
 function extractVideoId(val){
   if(!val)return '';
   val=val.trim();
-  // Handle full URLs
   var m=val.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^&?\s]+)/);
   if(m)return m[1];
-  // Already an ID
   return val;
 }
 
@@ -134,7 +131,7 @@ function saveVideos(){
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify({password:PASSWORD,adults_video:adults,kids_video:kids})
   })
-  .then(function(r){return r.json()})
+  .then(function(r){return r.json();})
   .then(function(d){
     if(d.status==='success'){showStatus('videoStatus','Videos updated! Live in ~60 seconds.','ok');}
     else{showStatus('videoStatus',d.message||'Error','err');}
@@ -166,25 +163,48 @@ function buildSectionNav(){
 
 function renderSection(){
   var sec=weekData.sections[currentSection];
-  var html='';
+  var c=document.getElementById('sectionContent');
+  c.innerHTML='';
   sec.subsections.forEach(function(sub,j){
-    html+='<div class="subsection-card">';
-    html+='<div class="focus-tag">'+sub.focus+'</div>';
-    html+='<h3>'+sub.title+'</h3>';
-    html+='<label>Title</label><input type="text" value="'+escHtml(sub.title)+'" onchange="updateField('+j+\',\'title\',this.value)">';
-    html+='<label>Subtitle</label><input type="text" value="'+escHtml(sub.subtitle)+'" onchange="updateField('+j+',\'subtitle\',this.value)">';
-    html+='<label>Description</label><textarea onchange="updateField('+j+',\'desc\',this.value)">'+escHtml(sub.desc)+'</textarea>';
-    html+='<label>Scripture</label><textarea onchange="updateField('+j+',\'verseText\',this.value)">'+escHtml(sub.verseText)+'</textarea>';
-    html+='<label>Scripture Ref</label><input type="text" value="'+escHtml(sub.verseRef)+'" onchange="updateField('+j+',\'verseRef\',this.value)">';
-    html+='<label>Adult Prayer</label><textarea onchange="updateField('+j+',\'adultPrayer\',this.value)">'+escHtml(sub.adultPrayer)+'</textarea>';
-    html+='<label>Kids Prayer</label><textarea onchange="updateField('+j+',\'kidsPrayer\',this.value)">'+escHtml(sub.kidsPrayer)+'</textarea>';
-    html+='</div>';
-  });
-  document.getElementById('sectionContent').innerHTML=html;
-}
+    var card=document.createElement('div');
+    card.className='subsection-card';
+    card.innerHTML='<div class="focus-tag">'+escHtml(sub.focus)+'</div>'
+      +'<h3>'+escHtml(sub.title)+'</h3>';
 
-function updateField(subIdx,field,value){
-  weekData.sections[currentSection].subsections[subIdx][field]=value;
+    var fields=[
+      {label:'Title',key:'title',type:'input'},
+      {label:'Subtitle',key:'subtitle',type:'input'},
+      {label:'Description',key:'desc',type:'textarea'},
+      {label:'Scripture',key:'verseText',type:'textarea'},
+      {label:'Scripture Ref',key:'verseRef',type:'input'},
+      {label:'Adult Prayer',key:'adultPrayer',type:'textarea'},
+      {label:'Kids Prayer',key:'kidsPrayer',type:'textarea'}
+    ];
+
+    fields.forEach(function(f){
+      var lbl=document.createElement('label');
+      lbl.textContent=f.label;
+      card.appendChild(lbl);
+
+      var el;
+      if(f.type==='textarea'){
+        el=document.createElement('textarea');
+        el.textContent=sub[f.key]||'';
+      }else{
+        el=document.createElement('input');
+        el.type='text';
+        el.value=sub[f.key]||'';
+      }
+      el.dataset.sub=j;
+      el.dataset.field=f.key;
+      el.addEventListener('input',function(){
+        weekData.sections[currentSection].subsections[parseInt(this.dataset.sub)][this.dataset.field]=this.value;
+      });
+      card.appendChild(el);
+    });
+
+    c.appendChild(card);
+  });
 }
 
 function saveWeek(){
@@ -196,7 +216,7 @@ function saveWeek(){
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify({password:PASSWORD,week_number:w,week_data:JSON.stringify(weekData)})
   })
-  .then(function(r){return r.json()})
+  .then(function(r){return r.json();})
   .then(function(d){
     if(d.status==='success'){showStatus('weekStatus','Week '+w+' updated! Live in ~60 seconds.','ok');}
     else{showStatus('weekStatus',d.message||'Error','err');}
