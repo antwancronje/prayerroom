@@ -1,0 +1,802 @@
+{
+  "startDate": "2026-03-01",
+  "startWeek": 5,
+  "videos": {
+    "adults": "HFP0B-UnjW4",
+    "kids": "F-6Qzmx_8-c"
+  },
+  "weeks": {
+    "5": {
+      "sections": [
+        {
+          "id": "love-god",
+          "title": "Love God",
+          "verse": "\"This, then, is how you should pray: 'Our Father in heaven, hallowed be your name...' We pray the name of God.",
+          "icon": "heart",
+          "count": "1 Prayer Point",
+          "subsections": [
+            {
+              "focus": "Name of God",
+              "title": "JEHOVAH NISSI",
+              "subtitle": "The Lord Is My Banner",
+              "desc": "God is our banner of victory. He fights for us and gives us triumph over our enemies.",
+              "verseText": "\"Moses built an altar and called it The LORD is my Banner.\"",
+              "verseRef": "Exodus 17:15",
+              "adultPrayer": "Jehovah Nissi, You are my banner of VICTORY! You go before me into battle. You fight for me. You give me triumph over every enemy. You are my rallying point, my hope, my victory! You are holy - undefeated and victorious always! I worship You!",
+              "kidsPrayer": "God, You fight for me and help me win! You are my victory! You are holy! I love You!"
+            }
+          ]
+        },
+        {
+          "id": "help-others",
+          "title": "Help Others",
+          "verse": "\"May Your kingdom come soon. May Your will be done on earth, as it is in heaven.\"",
+          "icon": "users",
+          "count": "3 Prayer Points",
+          "subsections": [
+            {
+              "focus": "Salvation",
+              "title": "FAMILY MEMBERS",
+              "subtitle": "",
+              "desc": "God wants entire households to be saved and come to faith in Jesus.",
+              "verseText": "\"Believe in the Lord Jesus and you will be saved, along with everyone in your household.\"",
+              "verseRef": "Acts 16:31",
+              "adultPrayer": "Father, save my family members who don't know Jesus! [Name each one]. Break through their hardness of heart. Remove spiritual blindness. Let them see the truth and be saved! Save my entire household!",
+              "kidsPrayer": "Jesus, please save my mom, dad, brothers, sisters, grandparents, aunts, uncles, cousins who don't know You!"
+            },
+            {
+              "focus": "Deliverance",
+              "title": "GENERATIONAL CURSES",
+              "subtitle": "",
+              "desc": "Jesus breaks generational curses and replaces them with generational blessings.",
+              "verseText": "\"But I lavish unfailing love for a thousand generations on those who love me and obey my commands.\"",
+              "verseRef": "Exodus 20:6",
+              "adultPrayer": "Jesus, break every generational curse at church! Destroy patterns of addiction, divorce, poverty, sickness, and sin passed down through family lines. Stop the cycle! Let generational blessings flow instead of curses. Set families free!",
+              "kidsPrayer": "Jesus, stop bad things that keep happening in families over and over. Make good things happen instead!"
+            },
+            {
+              "focus": "Healing",
+              "title": "FROM GRIEF AND LOSS",
+              "subtitle": "",
+              "desc": "Jesus heals the deep pain of grief and loss with His comfort.",
+              "verseText": "\"He will wipe every tear from their eyes, and there will be no more death or sorrow or crying or pain. All these things are gone forever.\"",
+              "verseRef": "Revelation 21:4",
+              "adultPrayer": "Lord Jesus, heal those at Jesus People grieving the loss of loved ones! Comfort broken hearts. Heal the pain of death, divorce, miscarriage, and loss. Wipe away tears. Replace sorrow with Your peace. Restore joy!",
+              "kidsPrayer": "Jesus, help people who are very sad because someone they love died or left. Comfort them!"
+            }
+          ]
+        },
+        {
+          "id": "our-needs",
+          "title": "Our Needs",
+          "verse": "\"Give us today the food we need.\"",
+          "icon": "hand",
+          "count": "4 Prayer Points",
+          "subsections": [
+            {
+              "focus": "Pastors & Leaders",
+              "title": "MARRIAGE AND FAMILY",
+              "subtitle": "",
+              "desc": "God wants leaders' marriages to be strong, passionate, and healthy.",
+              "verseText": "\"Enjoy the wife you married as a young man! ... May you always be captivated by her love.\"",
+              "verseRef": "Proverbs 5:18-19",
+              "adultPrayer": "Father, bless the marriages of Pastor Antwan and all our leaders! Strengthen their love. Keep their marriages passionate and strong. Protect them from anything that would divide them. Give their families health, joy, and unity!",
+              "kidsPrayer": "God, help our pastor and leaders have strong, happy marriages and families!"
+            },
+            {
+              "focus": "Church & Members",
+              "title": "WISDOM & FAVOR",
+              "subtitle": "",
+              "desc": "God is the source of all wisdom and grants favor to those who seek Him.",
+              "verseText": "\"For the Lord grants wisdom! From His mouth come knowledge and understanding.\"",
+              "verseRef": "Proverbs 2:6",
+              "adultPrayer": "Lord, give Jesus People Church wisdom and favor in everything we do! Give us wisdom for decisions, strategies, and direction locally and internationally. Grant us favor with people, authorities, and communities. Open doors that no one can shut. Let wisdom and favor mark everything we do!",
+              "kidsPrayer": "Jesus, make us really wise and help everyone like us and want to help us!"
+            },
+            {
+              "focus": "Family & Friends",
+              "title": "GODLY RELATIONSHIPS",
+              "subtitle": "",
+              "desc": "God wants us surrounded by godly friendships that build us up.",
+              "verseText": "\"There are 'friends' who destroy each other, but a real friend sticks closer than a brother.\"",
+              "verseRef": "Proverbs 18:24",
+              "adultPrayer": "Lord, give my family and friends godly friendships and relationships! Surround them with people who love You and encourage faith. Remove toxic relationships. Connect them with friends who stick closer than family. Build godly community around them!",
+              "kidsPrayer": "Jesus, give my family and friends good friends who love You and are kind!"
+            },
+            {
+              "focus": "Nations",
+              "title": "ECONOMIC PROSPERITY",
+              "subtitle": "",
+              "desc": "When people work as unto the Lord, God blesses nations with prosperity.",
+              "verseText": "\"Work willingly at whatever you do, as though you were working for the Lord rather than for people.\"",
+              "verseRef": "Colossians 3:23",
+              "adultPrayer": "Father, bring economic prosperity and job creation to South Africa, USA, and Israel! Open employment opportunities. Bless businesses and entrepreneurs. Create jobs so people can provide for their families. Let our economies thrive!",
+              "kidsPrayer": "God, give people in our countries good jobs so they can buy what they need!"
+            }
+          ]
+        },
+        {
+          "id": "sorry-forgive",
+          "title": "Sorry & Forgive",
+          "verse": "\"And forgive us our sins, as we have forgiven those who sin against us.\"",
+          "icon": "refresh",
+          "count": "1 Prayer Point",
+          "subsections": [
+            {
+              "focus": "Confession",
+              "title": "SELFISHNESS",
+              "subtitle": "",
+              "desc": "God wants us to give cheerfully and generously, not selfishly.",
+              "verseText": "\"You must each decide in your heart how much to give. And don't give reluctantly or in response to pressure. For God loves a person who gives cheerfully.\"",
+              "verseRef": "2 Corinthians 9:7",
+              "adultPrayer": "Father, I confess selfishness and lack of generosity. I've held tightly to my money, time, and resources. I've put myself first instead of serving others. I've been stingy instead of generous. Forgive me! Make me a cheerful giver. I also forgive [name person] who was selfish toward me. I release them!",
+              "kidsPrayer": "Jesus, I'm sorry for being selfish and not sharing. Help me be generous! I forgive people who didn't share with me!"
+            }
+          ]
+        },
+        {
+          "id": "stay-safe",
+          "title": "Stay Safe",
+          "verse": "\"And don't let us yield to temptation, but rescue us from the evil one.\"",
+          "icon": "shield",
+          "count": "4 Prayer Points",
+          "subsections": [
+            {
+              "focus": "Pastors & Leaders",
+              "title": "GUARD THEIR MINDS",
+              "subtitle": "",
+              "desc": "Leaders must guard their minds from doubt and stay strong in faith.",
+              "verseText": "\"Then Jesus said to the disciples, 'Have faith in God.'\"",
+              "verseRef": "Mark 11:22",
+              "adultPrayer": "Lord, guard the minds of Pastor Antwan all our leaders and their families from doubt and unbelief! Protect them from questioning Your calling, Your power, and Your promises. Strengthen their faith. Drive out doubt with Your truth!",
+              "kidsPrayer": "God, don't let our pastor and leaders doubt You! Make their faith really strong!"
+            },
+            {
+              "focus": "Church Members",
+              "title": "GUARD UNITY & LOVE",
+              "subtitle": "",
+              "desc": "Love and unity must be protected in the church.",
+              "verseText": "\"Most important of all, continue to show deep love for each other, for love covers a multitude of sins.\"",
+              "verseRef": "1 Peter 4:8",
+              "adultPrayer": "Father, guard unity and love in Jesus People Church! Don't let division, gossip, or offense tear us apart. Protect us from petty arguments and disagreements. Keep us loving each other deeply. Preserve our unity!",
+              "kidsPrayer": "God, help everyone at church love each other and get along! Don't let us fight!"
+            },
+            {
+              "focus": "Family & Friends",
+              "title": "SICKNESS & DISEASE",
+              "subtitle": "",
+              "desc": "God both forgives sin and heals diseases.",
+              "verseText": "\"He forgives all my sins and heals all my diseases.\"",
+              "verseRef": "Psalm 103:3",
+              "adultPrayer": "Lord, guard Jesus People, my family and friends from sickness and disease! Build a wall of protection around their health. Keep cancer, diabetes, heart disease, and every sickness far from them. By Your stripes, we are healed!",
+              "kidsPrayer": "Jesus, keep sickness away from my church, my family and friends! Keep us healthy!"
+            },
+            {
+              "focus": "Nations",
+              "title": "CORRUPTION IN GOVERNMENT",
+              "subtitle": "",
+              "desc": "When the godly are in authority, the people rejoice.",
+              "verseText": "\"When the godly are in authority, the people rejoice. But when the wicked are in power, they groan.\"",
+              "verseRef": "Proverbs 29:2",
+              "adultPrayer": "Father, guard South Africa, USA, and Israel from corruption in government! Expose and remove corrupt officials. Raise up godly, honest leaders who fear You. Stop bribery, fraud, and abuse of power. Cleanse our governments!",
+              "kidsPrayer": "God, stop leaders from stealing and cheating! Give our countries honest leaders who do what's right!"
+            }
+          ]
+        },
+        {
+          "id": "thank-you",
+          "title": "Thank You",
+          "verse": "\"For Yours is the kingdom and the power and the glory forever. Amen.\"",
+          "icon": "star",
+          "count": "1 Prayer Point",
+          "subsections": [
+            {
+              "focus": "Gratitude",
+              "title": "FOR BREAKTHROUGH NOT YET SEEN",
+              "subtitle": "",
+              "desc": "We are confident that God hears us when we ask according to His will.",
+              "verseText": "\"And we are confident that he hears us whenever we ask for anything that pleases him.\"",
+              "verseRef": "1 John 5:14",
+              "adultPrayer": "Thank You, Jesus, for breakthrough I haven't seen yet! Thank You for family members being saved! Thank You for generational curses broken! Thank You for grief healed! Thank You for strong marriages among our leaders! Thank You for wisdom and favor! Thank You for godly relationships! Thank You for economic prosperity! Thank You for freedom from selfishness! Thank You for guarded minds and united hearts! Thank You for health and healed nations! YOURS is the kingdom! YOURS is the power! YOURS is the glory forever! AMEN!",
+              "kidsPrayer": "Thank You, Jesus, for hearing us when we pray! You always listen! Amen!"
+            }
+          ]
+        }
+      ]
+    },
+    "6": {
+      "sections": [
+        {
+          "id": "love-god",
+          "title": "Love God",
+          "verse": "\"This, then, is how you should pray: 'Our Father in heaven, hallowed be your name...' We pray the name of God.",
+          "icon": "heart",
+          "count": "1 Prayer Point",
+          "subsections": [
+            {
+              "focus": "Name of God",
+              "title": "ADONAI",
+              "subtitle": "Lord, Master",
+              "desc": "Adonai means Lord and Master - the One who has complete authority over all.",
+              "verseText": "",
+              "verseRef": "",
+              "adultPrayer": "Adonai, You are my Lord and MASTER! You have all authority. You rule over everything. I surrender my life completely to You. You are in charge - not me. You are holy - sovereign, powerful, supreme! I worship You, my Master!",
+              "kidsPrayer": "God, You're the boss of everything! You're in charge! You are holy! I love You!"
+            }
+          ]
+        },
+        {
+          "id": "help-others",
+          "title": "Help Others",
+          "verse": "\"May Your kingdom come soon. May Your will be done on earth, as it is in heaven.\"",
+          "icon": "users",
+          "count": "3 Prayer Points",
+          "subsections": [
+            {
+              "focus": "Salvation",
+              "title": "COWORKERS & CLASSMATES",
+              "subtitle": "",
+              "desc": "God wants us to bring the good news of Jesus to those we work and study with.",
+              "verseText": "\"How beautiful are the feet of messengers who bring good news!\"",
+              "verseRef": "Romans 10:15",
+              "adultPrayer": "Father, let my coworkers and classmates hear the gospel! Give me courage to share Jesus with them. Open conversations about faith. Let them see Jesus in my life. Save them! Use me to bring them to You!",
+              "kidsPrayer": "Jesus, help me tell my friends at school and my parents' friends at work about You! Save them!"
+            },
+            {
+              "focus": "Deliverance",
+              "title": "FREEDOM FROM SHAME & GUILT",
+              "subtitle": "",
+              "desc": "Jesus removes all condemnation, shame, and guilt from those who trust in Him.",
+              "verseText": "\"So now there is no condemnation for those who belong to Christ Jesus.\"",
+              "verseRef": "Romans 8:1",
+              "adultPrayer": "Jesus, deliver people at church from shame and guilt! Break the weight of condemnation. Free them from feeling dirty, unworthy, and unforgivable. Let them know there is NO condemnation in You. Set them free from shame!",
+              "kidsPrayer": "Jesus, help people stop feeling bad and guilty about their past. Make them feel clean and loved!"
+            },
+            {
+              "focus": "Healing",
+              "title": "CHILDREN WITH SPECIAL NEEDS",
+              "subtitle": "",
+              "desc": "Jesus loves and values every child, including those with special needs.",
+              "verseText": "\"Jesus called for the children and said to them, 'Let the children come to me. Don't stop them! For the Kingdom of God belongs to those who are like these children.'\"",
+              "verseRef": "Luke 18:16",
+              "adultPrayer": "Lord Jesus, thank you for the amazing children who have special needs! Thank you that we see you in them. Heal every type of autism, syndrome, cerebral palsy and developmental delays. Touch their bodies and minds. Work miracles in their lives. Bless them and their families!",
+              "kidsPrayer": "Jesus, thank you for my friends who have special needs. Heal them, help them and help their families too!"
+            }
+          ]
+        },
+        {
+          "id": "our-needs",
+          "title": "Our Needs",
+          "verse": "\"Give us today the food we need.\"",
+          "icon": "hand",
+          "count": "4 Prayer Points",
+          "subsections": [
+            {
+              "focus": "Pastors & Leaders",
+              "title": "FINANCIAL PROVISION",
+              "subtitle": "",
+              "desc": "God supplies all the needs of His servants from His unlimited riches.",
+              "verseText": "\"And my God will meet all your needs according to the riches of his glory in Christ Jesus.\"",
+              "verseRef": "Philippians 4:19",
+              "adultPrayer": "Father, provide financially for Pastor Antwan and all our leaders! Meet their personal needs, family needs, and ministry needs. Give them more than enough. Let them lack nothing. Provide from Your glorious riches!",
+              "kidsPrayer": "God, give our pastor and leaders all the money they need for everything!"
+            },
+            {
+              "focus": "Church & Members",
+              "title": "FEAR OF THE LORD",
+              "subtitle": "",
+              "desc": "The fear of the Lord is where true knowledge and wisdom begin.",
+              "verseText": "\"Fear of the Lord is the foundation of true knowledge, but fools despise wisdom and discipline.\"",
+              "verseRef": "Proverbs 1:7",
+              "adultPrayer": "Lord, increase the fear of the Lord in Jesus People Church! Give us holy reverence for You. Let us tremble at Your Word. Remove casual, flippant attitudes toward You. Restore awe, wonder, and holy fear of who You are! Make us a people who fear You!",
+              "kidsPrayer": "Jesus, help us respect You and know how amazing and powerful You are!"
+            },
+            {
+              "focus": "Family & Friends",
+              "title": "PHYSICAL HEALTH",
+              "subtitle": "",
+              "desc": "God hears our cries and restores health.",
+              "verseText": "\"O Lord my God, I cried to you for help, and you restored my health.\"",
+              "verseRef": "Psalm 30:2",
+              "adultPrayer": "Lord, give my church, my family and friends physical health and healing! Heal sickness, disease, and injuries. Restore their bodies to full health. Strengthen their immune systems. Keep them well and strong!",
+              "kidsPrayer": "Jesus, make my family and friends healthy and strong! Heal anyone who is sick!"
+            },
+            {
+              "focus": "Nations",
+              "title": "JUSTICE IN LEGAL SYSTEMS",
+              "subtitle": "",
+              "desc": "God commands nations to establish justice and defend the vulnerable.",
+              "verseText": "\"Learn to do good. Seek justice. Help the oppressed. Defend the cause of orphans. Fight for the rights of widows.\"",
+              "verseRef": "Isaiah 1:17",
+              "adultPrayer": "Father, bring justice to the legal and court systems of South Africa, USA, and Israel! Remove corrupt judges. Appoint righteous judges who fear You. Let the innocent be declared innocent and the guilty held accountable. Defend the oppressed!",
+              "kidsPrayer": "God, make judges and courts fair! Help them do what's right and protect people who can't protect themselves!"
+            }
+          ]
+        },
+        {
+          "id": "sorry-forgive",
+          "title": "Sorry & Forgive",
+          "verse": "\"And forgive us our sins, as we have forgiven those who sin against us.\"",
+          "icon": "refresh",
+          "count": "1 Prayer Point",
+          "subsections": [
+            {
+              "focus": "Confession",
+              "title": "HARMFUL WORDS",
+              "subtitle": "",
+              "desc": "Our words should build up, not tear down.",
+              "verseText": "\"Don't use foul or abusive language. Let everything you say be good and helpful, so that your words will be an encouragement to those who hear them.\"",
+              "verseRef": "Ephesians 4:29",
+              "adultPrayer": "Father, I confess gossip, slander, and harmful words. I've said things about others that I shouldn't have said. I've torn people down with my words instead of building them up. I've spread rumors and talked behind backs. Forgive me! Tame my tongue. I also forgive [name person] who gossiped about me or spoke harmful words. I release them!",
+              "kidsPrayer": "Jesus, I'm sorry for saying mean things about people and talking about them. Help me say nice things! I forgive people who said mean things about me!"
+            }
+          ]
+        },
+        {
+          "id": "stay-safe",
+          "title": "Stay Safe",
+          "verse": "\"And don't let us yield to temptation, but rescue us from the evil one.\"",
+          "icon": "shield",
+          "count": "4 Prayer Points",
+          "subsections": [
+            {
+              "focus": "Pastors & Leaders",
+              "title": "DIVISION",
+              "subtitle": "",
+              "desc": "Unity must be protected among leaders.",
+              "verseText": "\"I appeal to you, dear brothers and sisters, by the authority of our Lord Jesus Christ, to live in harmony with each other. Let there be no divisions in the church. Rather, be of one mind, united in thought and purpose.\"",
+              "verseRef": "1 Corinthians 1:10",
+              "adultPrayer": "Lord, protect Pastor Antwan and all our leaders from division! Don't let the enemy create misunderstandings, conflicts, or disagreements among them and their families. Keep them united in vision and purpose. Guard their relationships with each other!",
+              "kidsPrayer": "God, don't let our leaders fight or disagree! Keep them loving each other and working together!"
+            },
+            {
+              "focus": "Church Members",
+              "title": "FROM COMPROMISE",
+              "subtitle": "",
+              "desc": "Believers must be protected from conforming to worldly standards.",
+              "verseText": "\"Don't copy the behavior and customs of this world, but let God transform you into a new person by changing the way you think.\"",
+              "verseRef": "Romans 12:2",
+              "adultPrayer": "Father, protect every church member from compromise and worldliness! Guard us from adopting the world's values, behaviors, and beliefs. Keep us set apart. Transform our thinking. Don't let us blend in with the world!",
+              "kidsPrayer": "God, help us be different from the world and live the way You want!"
+            },
+            {
+              "focus": "Family & Friends",
+              "title": "CRIME & VIOLENCE",
+              "subtitle": "",
+              "desc": "God is faithful to guard us from evil and violence.",
+              "verseText": "\"But the Lord is faithful; he will strengthen you and guard you from the evil one.\"",
+              "verseRef": "2 Thessalonians 3:3",
+              "adultPrayer": "Lord, protect Jesus People, my family and friends from crime and violence! Guard them from theft, assault, robbery, carjacking, and every violent crime. Keep them safe from criminals and those who want to harm them!",
+              "kidsPrayer": "Jesus, protect my family and friends from bad people who steal and hurt others!"
+            },
+            {
+              "focus": "Nations",
+              "title": "RELIGIOUS FREEDOM",
+              "subtitle": "",
+              "desc": "Even when persecuted, believers are blessed and belong to God's kingdom.",
+              "verseText": "\"God blesses those who are persecuted for doing right, for the Kingdom of Heaven is theirs.\"",
+              "verseRef": "Matthew 5:10",
+              "adultPrayer": "Father, protect religious freedom in South Africa, USA, and Israel! Defend the right to worship You freely. Stop persecution of believers. Don't let governments restrict faith. Preserve our freedom to preach, teach, and live out our faith!",
+              "kidsPrayer": "God, don't let anyone stop us from worshiping You and telling others about You!"
+            }
+          ]
+        },
+        {
+          "id": "thank-you",
+          "title": "Thank You",
+          "verse": "\"For Yours is the kingdom and the power and the glory forever. Amen.\"",
+          "icon": "star",
+          "count": "1 Prayer Point",
+          "subsections": [
+            {
+              "focus": "Gratitude",
+              "title": "FOR BREAKTHROUGH NOT YET SEEN",
+              "subtitle": "",
+              "desc": "Our confidence is in God who hears and answers prayer according to His will.",
+              "verseText": "\"And we are confident that he hears us whenever we ask for anything that pleases him.\"",
+              "verseRef": "1 John 5:14",
+              "adultPrayer": "Thank You, Jesus, for breakthrough I haven't seen yet! Thank You for coworkers and classmates being saved! Thank You for shame and guilt destroyed! Thank You for children with special needs healed! Thank You for leaders financially provided for! Thank You for the fear of the Lord! Thank You for physical health! Thank You for justice in courts! Thank You for leaders united! Thank You for church members staying pure! Thank You for safety from crime! Thank You for religious freedom! YOURS is the kingdom! YOURS is the power! YOURS is the glory forever! AMEN!",
+              "kidsPrayer": "Thank You, Jesus, for hearing us when we pray! You always listen! Amen!"
+            }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "sections": [
+        {
+          "id": "love-god",
+          "title": "Love God",
+          "verse": "\"This, then, is how you should pray: 'Our Father in heaven, hallowed be your name...' We pray the name of God.",
+          "icon": "heart",
+          "count": "1 Prayer Point",
+          "subsections": [
+            {
+              "focus": "Name of God",
+              "title": "EL SHADDAI",
+              "subtitle": "God Almighty",
+              "desc": "El Shaddai means God Almighty - the all-powerful, all-sufficient One. Nothing is impossible for Him.",
+              "verseText": "",
+              "verseRef": "",
+              "adultPrayer": "El Shaddai, You are God ALMIGHTY! Nothing is impossible for You! You have all power, all strength, all might. You are the all-sufficient One who meets every need. You are holy - unlimited in power and authority! I worship You!",
+              "kidsPrayer": "God, You can do anything! You're the most powerful! You are holy! I love You!"
+            }
+          ]
+        },
+        {
+          "id": "help-others",
+          "title": "Help Others",
+          "verse": "\"May Your kingdom come soon. May Your will be done on earth, as it is in heaven.\"",
+          "icon": "users",
+          "count": "3 Prayer Points",
+          "subsections": [
+            {
+              "focus": "Salvation",
+              "title": "OUR NEIGHBORS",
+              "subtitle": "",
+              "desc": "Jesus commands us to love our neighbors, which includes sharing the gospel with them.",
+              "verseText": "\"Love your neighbor as yourself.\"",
+              "verseRef": "Mark 12:31",
+              "adultPrayer": "Father, save my neighbors! Let them encounter Jesus. Give me opportunities to share the gospel with them. Let my life be a testimony of Your love. Bring salvation to every household in my neighborhood!",
+              "kidsPrayer": "Jesus, save my neighbors! Help me show them Your love and tell them about You!"
+            },
+            {
+              "focus": "Deliverance",
+              "title": "CONTROLLING RELATIONSHIPS",
+              "subtitle": "",
+              "desc": "Jesus frees people from every form of slavery, including controlling relationships.",
+              "verseText": "\"It is for freedom that Christ has set us free. Stand firm, then, and do not let yourselves be burdened again by a yoke of slavery.\"",
+              "verseRef": "Galatians 5:1",
+              "adultPrayer": "Jesus, deliver people in Jesus People from controlling, manipulative, and abusive relationships! Break the power of controllers. Give victims courage to leave. Set them free from emotional, spiritual, and physical bondage. Let them experience healthy relationships!",
+              "kidsPrayer": "Jesus, help people get away from mean people who control them and hurt them. Keep them safe!"
+            },
+            {
+              "focus": "Healing",
+              "title": "INFERTILITY & REPRODUCTIVE ISSUES",
+              "subtitle": "",
+              "desc": "God opens wombs and gives children to those who long for them.",
+              "verseText": "\"He gives the childless woman a family, making her a happy mother. Praise the Lord!\"",
+              "verseRef": "Psalm 113:9",
+              "adultPrayer": "Lord Jesus, heal infertility and reproductive issues at church! Open wombs. Heal PCOS, endometriosis, low sperm count, and every reproductive condition. Give children to those who long for them. Make the barren woman a joyful mother!",
+              "kidsPrayer": "Jesus, help moms and dads who want babies but can't have them. Give them babies!"
+            }
+          ]
+        },
+        {
+          "id": "our-needs",
+          "title": "Our Needs",
+          "verse": "\"Give us today the food we need.\"",
+          "icon": "hand",
+          "count": "4 Prayer Points",
+          "subsections": [
+            {
+              "focus": "Pastors & Leaders",
+              "title": "UNITY",
+              "subtitle": "",
+              "desc": "God delights when leaders work together in unity and harmony.",
+              "verseText": "\"How wonderful and pleasant it is when brothers live together in harmony!\"",
+              "verseRef": "Psalm 133:1",
+              "adultPrayer": "Father, create and protect unity among Pastor Antwan and the entire leadership team! Keep them on the same page. Give them one vision, one heart, one purpose. Remove misunderstandings and conflicts. Let them work together in perfect harmony!",
+              "kidsPrayer": "God, help all our leaders love each other and work together as a team!"
+            },
+            {
+              "focus": "Church & Members",
+              "title": "SIGNS, WONDERS & MIRACLES",
+              "subtitle": "",
+              "desc": "God confirms His Word with signs, wonders, and miracles.",
+              "verseText": "\"And the believers were filled with joy and with the Holy Spirit.\"",
+              "verseRef": "Acts 13:52",
+              "adultPrayer": "Lord, release signs, wonders, and miracles in Jesus People Church! Let the supernatural become normal. Heal the sick! Work miracles! Confirm Your Word with signs following. Let people see Your power and believe! Demonstrate Your kingdom!",
+              "kidsPrayer": "Jesus, do amazing miracles at our church! Heal people! Do things only You can do!"
+            },
+            {
+              "focus": "Family & Friends",
+              "title": "CHILDREN LOVE GOD",
+              "subtitle": "",
+              "desc": "Children trained in God's ways will walk with Him their whole lives.",
+              "verseText": "\"Train up a child in the way he should go, and when he is old he will not depart from it.\"",
+              "verseRef": "Proverbs 22:6",
+              "adultPrayer": "Lord, let the children in my church, family and among my friends walk with You! Give them genuine faith from a young age. Protect them from rebellion. Keep them on the path of righteousness. Let them serve You their whole lives!",
+              "kidsPrayer": "Jesus, help the kids in my family love You and follow You their whole lives!"
+            },
+            {
+              "focus": "Nations",
+              "title": "UNITY AMONG PEOPLE",
+              "subtitle": "",
+              "desc": "In Christ, all divisions are removed and we are one.",
+              "verseText": "\"There is no longer Jew or Gentile, slave or free, male and female. For you are all one in Christ Jesus.\"",
+              "verseRef": "Galatians 3:28",
+              "adultPrayer": "Father, bring unity among diverse people groups in South Africa, USA, and Israel! Break down walls of division. Heal racial tensions and ethnic conflicts. Help different groups love and respect each other. Make us one!",
+              "kidsPrayer": "God, help people of different colors and backgrounds love each other and get along!"
+            }
+          ]
+        },
+        {
+          "id": "sorry-forgive",
+          "title": "Sorry & Forgive",
+          "verse": "\"And forgive us our sins, as we have forgiven those who sin against us.\"",
+          "icon": "refresh",
+          "count": "1 Prayer Point",
+          "subsections": [
+            {
+              "focus": "Confession",
+              "title": "IMPURITY",
+              "subtitle": "",
+              "desc": "Sexual sin uniquely affects us and must be fled from.",
+              "verseText": "\"Run from sexual sin! No other sin so clearly affects the body as this one does. For sexual immorality is a sin against your own body.\"",
+              "verseRef": "1 Corinthians 6:18",
+              "adultPrayer": "Father, I confess sexual sin and impurity. [Be specific - pornography, premarital sex, adultery, lustful thoughts, etc.] I've sinned against my own body and against You. Forgive me! Wash me clean. Make me pure. I also forgive [name person] involved in sexual sin with me or who led me into sin. I release them!",
+              "kidsPrayer": "Jesus, I'm sorry for looking at bad things and thinking wrong thoughts. Make me pure! I forgive people who did wrong things with me!"
+            }
+          ]
+        },
+        {
+          "id": "stay-safe",
+          "title": "Stay Safe",
+          "verse": "\"And don't let us yield to temptation, but rescue us from the evil one.\"",
+          "icon": "shield",
+          "count": "4 Prayer Points",
+          "subsections": [
+            {
+              "focus": "Pastors & Leaders",
+              "title": "STRENGTH",
+              "subtitle": "",
+              "desc": "Leaders face opposition but are not destroyed because God sustains them.",
+              "verseText": "\"We are pressed on every side by troubles, but we are not crushed. We are perplexed, but not driven to despair.\"",
+              "verseRef": "2 Corinthians 4:8",
+              "adultPrayer": "Lord, give Pastor Antwan and all our leaders strength against opposition and persecution! When people criticize, attack, or oppose them, strengthen them. Don't let opposition crush them. Give them perseverance to keep going!",
+              "kidsPrayer": "God, make our leaders strong when people are mean to them and say bad things!"
+            },
+            {
+              "focus": "Church Members",
+              "title": "TO STAND FIRM",
+              "subtitle": "",
+              "desc": "Those who hope in the Lord receive strength and courage.",
+              "verseText": "\"So be strong and courageous, all you who put your hope in the Lord!\"",
+              "verseRef": "Psalm 31:24",
+              "adultPrayer": "Father, give every church member strength to stand firm in faith! Don't let us waver or fall away. Strengthen us when we're weak. Give us courage when we're afraid. Help us stand strong no matter what!",
+              "kidsPrayer": "God, make us strong so we don't give up when things are hard!"
+            },
+            {
+              "focus": "Family & Friends",
+              "title": "ANGELIC PROTECTION",
+              "subtitle": "",
+              "desc": "God commands His angels to guard and protect us.",
+              "verseText": "\"For he will order his angels to protect you wherever you go.\"",
+              "verseRef": "Psalm 91:11",
+              "adultPrayer": "Lord, I ask that you will send Your angels to protect my family and friends! Surround them with angelic guards. Let angels go before them, beside them, and behind them. Protect them from seen and unseen dangers!",
+              "kidsPrayer": "Jesus, send Your angels to protect my family and friends everywhere they go!"
+            },
+            {
+              "focus": "Nations",
+              "title": "EVIL IDEOLOGIES",
+              "subtitle": "",
+              "desc": "Believers must be protected from philosophies that contradict God's truth.",
+              "verseText": "\"Don't let anyone capture you with empty philosophies and high-sounding nonsense that come from human thinking and from the spiritual powers of this world, rather than from Christ.\"",
+              "verseRef": "Colossians 2:8",
+              "adultPrayer": "Father, shield South Africa, USA, and Israel from evil ideologies and movements that oppose Your truth! Protect our nations from philosophies, laws, and movements that promote sin and destroy righteousness. Guard our nations from spiritual darkness!",
+              "kidsPrayer": "God, protect our countries from bad ideas and lies that hurt people!"
+            }
+          ]
+        },
+        {
+          "id": "thank-you",
+          "title": "Thank You",
+          "verse": "\"For Yours is the kingdom and the power and the glory forever. Amen.\"",
+          "icon": "star",
+          "count": "1 Prayer Point",
+          "subsections": [
+            {
+              "focus": "Gratitude",
+              "title": "FOR BREAKTHROUGH NOT YET SEEN",
+              "subtitle": "",
+              "desc": "We thank God in all circumstances because that's His will for us.",
+              "verseText": "\"Always be joyful. Never stop praying. Be thankful in all circumstances, for this is God's will for you who belong to Christ Jesus.\"",
+              "verseRef": "1 Thessalonians 5:16-18",
+              "adultPrayer": "Thank You, Jesus, for breakthrough I haven't seen yet! Thank You for neighbors being saved! Thank You for people freed from controlling relationships! Thank You for infertility healed and babies coming! Thank You for unity among our leaders! Thank You for signs, wonders, and miracles! Thank You for children walking with You! Thank You for unity in our nations! YOURS is the kingdom! YOURS is the power! YOURS is the glory forever! AMEN!",
+              "kidsPrayer": "Thank You, Jesus, in everything! You're so good! Amen!"
+            }
+          ]
+        }
+      ]
+    },
+    "8": {
+      "sections": [
+        {
+          "id": "love-god",
+          "title": "Love God",
+          "verse": "\"This, then, is how you should pray: 'Our Father in heaven, hallowed be your name...' We pray the name of God.",
+          "icon": "heart",
+          "count": "1 Prayer Point",
+          "subsections": [
+            {
+              "focus": "Name of God",
+              "title": "JEHOVAH TSIDKENU",
+              "subtitle": "The Lord Our Righteousness",
+              "desc": "Jesus is our righteousness. We are made right with God through Him, not through our own works.",
+              "verseText": "",
+              "verseRef": "",
+              "adultPrayer": "Jehovah Tsidkenu, You are the Lord my RIGHTEOUSNESS! I am righteous not because of what I've done, but because of what You've done. You make me right with God. You clothe me in Your righteousness. You are holy - perfectly righteous and pure! I worship You!",
+              "kidsPrayer": "God, You make me right and good! Not because I'm perfect, but because of Jesus! You are holy! I love You!"
+            }
+          ]
+        },
+        {
+          "id": "help-others",
+          "title": "Help Others",
+          "verse": "\"May Your kingdom come soon. May Your will be done on earth, as it is in heaven.\"",
+          "icon": "users",
+          "count": "3 Prayer Points",
+          "subsections": [
+            {
+              "focus": "Salvation",
+              "title": "FALLING DEEPER IN LOVE",
+              "subtitle": "",
+              "desc": "Believers can fall more deeply in love with Jesus even though they can't see Him.",
+              "verseText": "\"You love him even though you have never seen him. Though you do not see him now, you trust him; and you rejoice with a glorious, inexpressible joy.\"",
+              "verseRef": "1 Peter 1:8",
+              "adultPrayer": "Father, let church members fall deeper in love with Jesus! Stir up fresh passion for You. Reignite first love. Deepen relationship and intimacy with You. Let us love You more today than yesterday, and more tomorrow than today!",
+              "kidsPrayer": "Jesus, help everyone at church love You more and more every day!"
+            },
+            {
+              "focus": "Deliverance",
+              "title": "FROM FINANCIAL BONDAGE & DEBT",
+              "subtitle": "",
+              "desc": "Debt creates bondage, and Jesus sets people free from financial slavery.",
+              "verseText": "\"The rich rule over the poor, and the borrower is slave to the lender.\"",
+              "verseRef": "Proverbs 22:7",
+              "adultPrayer": "Jesus, deliver people from financial bondage and debt! Break the chains of credit card debt, student loans, mortgages they can't afford, and every financial burden. Set them free! Give them wisdom to manage money. Lead them to financial freedom!",
+              "kidsPrayer": "Jesus, help people get out of debt and not owe money anymore! Help them be free!"
+            },
+            {
+              "focus": "Healing",
+              "title": "FROM ADDICTIONS & DEPENDENCIES",
+              "subtitle": "",
+              "desc": "Truth sets people free from bondage and addiction.",
+              "verseText": "\"And you will know the truth, and the truth will set you free.\"",
+              "verseRef": "John 8:32",
+              "adultPrayer": "Lord Jesus, heal addictions and dependencies in our church! Heal addiction to substances, food, technology, work, shopping, and every compulsive behavior. Break the chains completely. Heal the wounds that drive addiction. Set people free!",
+              "kidsPrayer": "Jesus, heal people who can't stop doing bad things that hurt them. Set them free!"
+            }
+          ]
+        },
+        {
+          "id": "our-needs",
+          "title": "Our Needs",
+          "verse": "\"Give us today the food we need.\"",
+          "icon": "hand",
+          "count": "4 Prayer Points",
+          "subsections": [
+            {
+              "focus": "Pastors & Leaders",
+              "title": "BOLDNESS IN PREACHING",
+              "subtitle": "",
+              "desc": "The gospel is powerful and should be preached boldly without shame.",
+              "verseText": "\"For I am not ashamed of this Good News about Christ. It is the power of God at work, saving everyone who believes.\"",
+              "verseRef": "Romans 1:16",
+              "adultPrayer": "Father, give Pastor Antwan, all our leaders and their families, boldness to preach Your Word! Let them preach the full gospel without compromise. Remove fear of man. Give them holy courage to speak truth even when it's unpopular. Anoint their words with power!",
+              "kidsPrayer": "God, make our leaders brave to preach the truth about You even when people don't like it!"
+            },
+            {
+              "focus": "Church & Members",
+              "title": "A PERMANENT BUILDING",
+              "subtitle": "",
+              "desc": "Only what God builds will last.",
+              "verseText": "\"Unless the Lord builds a house, the work of the builders is wasted.\"",
+              "verseRef": "Psalm 127:1",
+              "adultPrayer": "Lord, provide a permanent building for Jesus People Church! Give us land, finances, favor, and everything needed. Build the house with Your own hands. Give us a place to gather, worship, and minister. Provide our permanent home!",
+              "kidsPrayer": "Jesus, give our church our own building where we can meet all the time!"
+            },
+            {
+              "focus": "Family & Friends",
+              "title": "WISDOM IN PARENTING",
+              "subtitle": "",
+              "desc": "Parents who train children in God's ways will see them walk with God.",
+              "verseText": "\"Direct your children onto the right path, and when they are older, they will not leave it.\"",
+              "verseRef": "Proverbs 22:6",
+              "adultPrayer": "Lord, give church parents and others wisdom in raising their children! Show them how to discipline with love, teach with patience, and model faith genuinely. Give them discernment for each child's unique needs. Help them raise godly children!",
+              "kidsPrayer": "Jesus, help moms and dads know how to raise their kids to love You!"
+            },
+            {
+              "focus": "Nations",
+              "title": "NATIONAL REPENTANCE",
+              "subtitle": "",
+              "desc": "When nations repent and turn to God, He heals their land.",
+              "verseText": "\"If my people who are called by my name will humble themselves and pray and seek my face and turn from their wicked ways, I will hear from heaven and will forgive their sins and restore their land.\"",
+              "verseRef": "2 Chronicles 7:14",
+              "adultPrayer": "Father, bring national repentance and turning to You in South Africa, USA, and Israel! Convict hearts of sin. Lead people to humble themselves and pray. Turn our nations back to You. Forgive our sins. Heal our lands!",
+              "kidsPrayer": "God, help everyone in our countries say sorry for sin and turn back to You! Heal our countries!"
+            }
+          ]
+        },
+        {
+          "id": "sorry-forgive",
+          "title": "Sorry & Forgive",
+          "verse": "\"And forgive us our sins, as we have forgiven those who sin against us.\"",
+          "icon": "refresh",
+          "count": "1 Prayer Point",
+          "subsections": [
+            {
+              "focus": "Confession",
+              "title": "IDOLATRY",
+              "subtitle": "",
+              "desc": "God must be first. Nothing can take His place.",
+              "verseText": "\"You must not have any other god but me.\"",
+              "verseRef": "Exodus 20:3",
+              "adultPrayer": "Father, I confess idolatry. I've made money, success, comfort, and relationships more important than You. I've worshiped created things instead of the Creator. I've put other things on the throne of my heart. Forgive me! You alone are God. I also forgive [name person] who led me into idolatry or competed with You for my affection. I release them!",
+              "kidsPrayer": "Jesus, I'm sorry for loving other things more than You. You're the most important! I forgive people who tried to be more important than You!"
+            }
+          ]
+        },
+        {
+          "id": "stay-safe",
+          "title": "Stay Safe",
+          "verse": "\"And don't let us yield to temptation, but rescue us from the evil one.\"",
+          "icon": "shield",
+          "count": "4 Prayer Points",
+          "subsections": [
+            {
+              "focus": "Pastors & Leaders",
+              "title": "GUARD THEIR MARRIAGES",
+              "subtitle": "",
+              "desc": "Marriage must be honored and protected, especially for leaders.",
+              "verseText": "\"Give honor to marriage, and remain faithful to one another in marriage. God will surely judge people who are immoral and those who commit adultery.\"",
+              "verseRef": "Hebrews 13:4",
+              "adultPrayer": "Lord, guard the marriages of Pastor Antwan and all our leaders! Protect them from temptation, infidelity, and anything that would destroy their marriages. Keep their love strong. Help them honor their spouses. Shield their marriages from the enemy!",
+              "kidsPrayer": "God, protect the marriages of our pastor and leaders! Keep them loving their wives/husbands!"
+            },
+            {
+              "focus": "Church Members",
+              "title": "FROM FEAR",
+              "subtitle": "",
+              "desc": "Fear doesn't come from God.",
+              "verseText": "\"For God has not given us a spirit of fear and timidity, but of power, love, and self-discipline.\"",
+              "verseRef": "2 Timothy 1:7",
+              "adultPrayer": "Father, guard every church member from fear and intimidation! Drive out fear of the future, fear of failure, fear of people, and every tormenting fear. Replace fear with faith, power, love, and a sound mind!",
+              "kidsPrayer": "God, don't let us be scared! Make us brave and strong!"
+            },
+            {
+              "focus": "Family & Friends",
+              "title": "FROM ONLINE DANGERS",
+              "subtitle": "",
+              "desc": "What we consume online affects us - we reap what we sow.",
+              "verseText": "\"Don't be misled - you cannot mock the justice of God. You will always harvest what you plant.\"",
+              "verseRef": "Galatians 6:7",
+              "adultPrayer": "Lord, guard my church family, my family and friends from online dangers and social media harm! Protect them from cyberbullying, predators, pornography, scams, and harmful content. Give them wisdom about what to watch and post. Keep them safe online!",
+              "kidsPrayer": "Jesus, keep my family and friends safe from bad things online and on their phones!"
+            },
+            {
+              "focus": "Nations",
+              "title": "RACIAL DIVISION & HATRED",
+              "subtitle": "",
+              "desc": "In Christ, racial and ethnic divisions are removed.",
+              "verseText": "\"There is no longer Jew or Gentile, slave or free, male and female. For you are all one in Christ Jesus.\"",
+              "verseRef": "Galatians 3:28",
+              "adultPrayer": "Father, guard South Africa, USA, and Israel from racial division and hatred! Stop racism, prejudice, and ethnic hostility. Heal wounds from the past. Help people see each other as brothers and sisters. Remove hatred and bring unity!",
+              "kidsPrayer": "God, stop people from hating others because of their skin color! Help everyone love each other!"
+            }
+          ]
+        },
+        {
+          "id": "thank-you",
+          "title": "Thank You",
+          "verse": "\"For Yours is the kingdom and the power and the glory forever. Amen.\"",
+          "icon": "star",
+          "count": "1 Prayer Point",
+          "subsections": [
+            {
+              "focus": "Gratitude",
+              "title": "FOR BREAKTHROUGH NOT YET SEEN",
+              "subtitle": "",
+              "desc": "When we ask in Jesus' name, we receive and our joy is complete.",
+              "verseText": "\"You haven't done this before. Ask, using my name, and you will receive, and you will have abundant joy.\"",
+              "verseRef": "John 16:24",
+              "adultPrayer": "Thank You, Jesus, for breakthrough I haven't seen yet! Thank You for church members falling deeper in love with You! Thank You for financial freedom and debt broken! Thank You for addictions healed! Thank You for bold preaching! Thank You for our permanent building! Thank You for parents' wisdom! Thank You for nations turning to You! YOURS is the kingdom! YOURS is the power! YOURS is the glory forever! AMEN!",
+              "kidsPrayer": "Thank You, Jesus, for answering when we pray in Your name! You give us joy! Amen!"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
